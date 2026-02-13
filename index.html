@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paired</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
 
+    <div class="container">
+        <header>
+            <h1>Paired</h1>
+            <p class="subtitle">couples tarot reading</p>
+        </header>
+
+
+
+
+        <div class="input-section" id="inputSection">
+            <div class="input-group">
+                <label for="name1">enter your name here:</label>
+                <input type="text" id="name1" placeholder="Enter your name...">
+            </div>
+            <div class="input-group">
+                <label for="name2">enter the name of your loved one here:</label>
+                <input type="text" id="name2" placeholder="Enter their name...">
+            </div>
+            <button class="btn" onclick="startReading()">begin the reading</button>
+        </div>
+
+
+
+
+
+        <div class="reading-section" id="readingSection">
+            <div class="couple-names" id="coupleNames"></div>
+            
+            <div class="cards-container">
+
+
+
+
+
+                <div class="card-wrapper">
+                    <div class="card" id="card1" onclick="flipCard(1)">
+                        <div class="card-face card-back">
+                            <div class="card-back-symbol">✦</div>
+                        </div>
+                        <div class="card-face card-front">
+                            <div class="card-label">The Past</div>
+                            <div class="card-title" id="card1-title"></div>
+                            <div class="card-emoji" id="card1-emoji"></div>
+                            <div class="card-meaning" id="card1-meaning"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="card-wrapper">
+                    <div class="card" id="card2" onclick="flipCard(2)">
+                        <div class="card-face card-back">
+                            <div class="card-back-symbol">✦</div>
+                        </div>
+                        <div class="card-face card-front">
+                            <div class="card-label">The Present</div>
+                            <div class="card-title" id="card2-title"></div>
+                            <div class="card-emoji" id="card2-emoji"></div>
+                            <div class="card-meaning" id="card2-meaning"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="card-wrapper">
+                    <div class="card" id="card3" onclick="flipCard(3)">
+                        <div class="card-face card-back">
+                            <div class="card-back-symbol">✦</div>
+                        </div>
+                        <div class="card-face card-front">
+                            <div class="card-label">The Future</div>
+                            <div class="card-title" id="card3-title"></div>
+                            <div class="card-emoji" id="card3-emoji"></div>
+                            <div class="card-meaning" id="card3-meaning"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="final-reading" id="finalReading" style="display: none;">
+                <h2>Your Verdict :</h2>
+                <p id="verdict"></p>
+                <button class="btn reset-btn" onclick="resetReading()">begin again</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
